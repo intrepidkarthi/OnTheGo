@@ -1,0 +1,159 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingTop="5dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/share_layout_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+
+            <ImageView
+                android:id="@+id/facebook_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/facebook" />
+
+            <TextView
+                android:id="@+id/facebook_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/facebook_icon"
+                android:text="@string/share_facebook"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/share_layout_twitter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/share_layout_facebook"
+            android:layout_margin="20dp">
+
+
+            <ImageView
+                android:id="@+id/twitter_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/twitter" />
+
+            <TextView
+                android:id="@+id/twitter_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/twitter_icon"
+                android:text="@string/share_twitter"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/share_layout_whatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/share_layout_twitter"
+            android:layout_margin="20dp">
+
+
+            <ImageView
+                android:id="@+id/whatsapp_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/whatsapp" />
+
+            <TextView
+                android:id="@+id/whatsapp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/whatsapp_icon"
+                android:text="@string/share_whatsapp"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/share_layout_hike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/share_layout_whatsapp"
+            android:layout_margin="20dp">
+
+
+            <ImageView
+                android:id="@+id/hike_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/hike" />
+
+            <TextView
+                android:id="@+id/hike_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/hike_icon"
+                android:text="@string/share_hike"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/share_layout_others"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/share_layout_hike"
+            android:layout_margin="20dp">
+
+
+            <ImageView
+                android:id="@+id/other_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/apps" />
+
+            <TextView
+                android:id="@+id/other_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/other_icon"
+                android:text="@string/share_others"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

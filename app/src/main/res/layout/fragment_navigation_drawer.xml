@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/list_background"
+    android:orientation="vertical">
+
+    <com.looksphere.goindia.customview.RoundedImageView
+        android:id="@+id/userIcon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:ellipsize="marquee"
+        android:maxLines="2"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_below="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:choiceMode="singleChoice"
+        android:divider="@color/list_divider"
+        android:dividerHeight="0.3dp"
+        android:listSelector="@drawable/list_selector" />
+
+</RelativeLayout>

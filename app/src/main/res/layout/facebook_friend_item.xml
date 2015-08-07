@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:facebook="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:paddingLeft="5dp">
+
+
+    <FrameLayout
+        android:id="@+id/imageframe"
+        android:layout_width="80dp"
+        android:layout_height="80dp">
+
+        <in.bigo.cleanindia.customview.RoundedImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@+id/imageframe"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="hello"
+        android:textSize="20sp" />
+
+
+</RelativeLayout>

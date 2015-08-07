@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/home_background">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:visibility="visible"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+
+        <com.looksphere.goindia.customview.EndlessListView
+            android:id="@+id/endlesslist"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null"
+            android:dividerHeight="5dp"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"
+            android:scrollingCache="false"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/swachh"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:visibility="gone"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="13dp"
+        android:src="@drawable/ic_plus" />
+
+
+</FrameLayout>

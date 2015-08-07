@@ -1,0 +1,14 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/map_container"
+    android:layout_height="match_parent"
+    tools:context="in.bigo.cleanindia.fragment.MapDialogFragment">
+
+    <fragment
+        android:id="@+id/feedmap"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

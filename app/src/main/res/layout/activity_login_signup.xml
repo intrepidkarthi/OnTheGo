@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/semi_trans_color"
+    tools:context="in.bigo.yourdeals.ui.activity.LoginActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/semi_trans_color"></FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="90dp">
+
+        <RelativeLayout
+            android:id="@+id/google_signin_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="10dp">
+
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/gplus_login"
+                android:layout_width="fill_parent"
+                android:layout_height="80dp"
+                android:clickable="true"
+                android:layout_marginBottom="20dp" />
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/googleplus_color"
+                android:gravity="center"
+                android:clickable="false"
+                android:textSize="16sp"
+                android:text="Login with Google+">
+
+            </Button>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/fb_signin_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="10dp">
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/fblogin"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login with Facebook"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:clickable="false"
+                android:background="@color/facebook_color">
+
+
+            </Button>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/email_signin_button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:padding="10dp">
+
+            <!-- Login button -->
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Login with Email"
+                android:gravity="center"
+                android:background="@color/app_green">
+
+
+            </Button>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

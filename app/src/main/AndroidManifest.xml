@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.looksphere.goindia"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <!-- Include following permission if you load images from Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Include following permission if you want to cache images on SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Include following permission if you want Maps access -->
+    <uses-permission
+        android:name="android.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!-- Accessing camera hardware -->
+    <uses-feature android:name="android.hardware.camera" />
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--
+      IMPORTANT: Change "com.parse.tutorials.pushnotifications.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="com.looksphere.goindia.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.looksphere.goindia.permission.C2D_MESSAGE" />
+
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".global.OnTheGoApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:theme="@style/Base.Theme.OnTheGo" >
+        <activity
+            android:name=".activity.HomeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".activity.SplashActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.TutorialActivity" >
+        </activity>
+        <activity android:name=".activity.LoginSignUpActivity" >
+        </activity>
+        <activity android:name=".activity.CommentsActivity" >
+        </activity>
+        <activity android:name=".activity.ImageFullViewActivity" >
+        </activity>
+        <activity android:name=".activity.LauncherActivity" >
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="OnTheGo" >
+        </activity>
+        <activity android:name=".activity.ProfileActivity" >
+        </activity>
+        <activity android:name=".activity.SwachhPostActivity"
+            android:label="Post OnTheGo"
+            android:theme="@style/NormalTheme">
+        </activity>
+        <activity android:name=".activity.SwachhMapActivity" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.maps.v2.API_KEY" -->
+        <!-- android:value="AF:29:DC:4A:8C:BA:D8:49:70:7A:41:23:0E:38:FB:4B:06:E5:B0:2A;com.looksphere.goindia" /> -->
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDHmvoNaKkAtFKF95H9BkWueXzG0t4Cles" />
+
+        <service android:name="com.parse.PushService" />
+
+        <receiver android:name="com.parse.ParseBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!-- IMPORTANT: Change "com.parse.tutorials.pushnotifications" to match your app's package name. -->
+                <category android:name="in.bigo.cleanindia" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".receiver.ParsePushReceiver"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+
+        <!-- replace @drawable/push_icon with your push icon identifier -->
+        <meta-data
+            android:name="com.parse.push.notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+        <activity
+            android:name=".activity.ContainerActivity"
+            android:label="@string/title_activity_container" >
+        </activity>
+    </application>
+
+</manifest>

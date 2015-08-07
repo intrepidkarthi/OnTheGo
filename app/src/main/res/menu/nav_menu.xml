@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_home"
+                android:title="Home" />
+            <item
+                android:id="@+id/nav_messages"
+                android:icon="@drawable/ic_map"
+                android:title="Maps" />
+            <item
+                android:id="@+id/nav_friends"
+                android:icon="@drawable/ic_assigned_white"
+                android:title="Volunteering" />
+            <item
+                android:id="@+id/nav_discussion"
+                android:icon="@drawable/ic_completed_white"
+                android:title="Completed" />
+            <item
+                android:id="@+id/nav_redeem1"
+                android:icon="@drawable/ic_aboutus"
+                android:title="About us" />
+
+            <item
+                android:id="@+id/nav_redeem2"
+                android:icon="@drawable/ic_email"
+                android:title="Email us" />
+            <item
+                android:id="@+id/nav_redeem3"
+                android:icon="@drawable/ic_share"
+                android:title="Share love" />
+            <item
+                android:id="@+id/nav_redeem4"
+                android:icon="@drawable/ic_settings"
+                android:title="Settings" />
+
+        </group>
+
+
+
+    </menu>
+
+

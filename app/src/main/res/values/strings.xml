@@ -1,0 +1,133 @@
+<resources>
+    <string name="app_name">On The Go</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="email">TRAVEL</string>
+    <string name="calender">CARE</string>
+    <string name="shopping">CAMERA</string>
+    <string name="social_network">OnTheGo</string>
+
+
+    <string name="email_hint">Are you really bored of all the careless people around? Do you roam around a lot?</string>
+    <string name="calender_hint">Do you care about your environment and want to help to maintain healthier surroundings?</string>
+    <string name="shopping_hint">Are you a selfie freak? Do you like clicking more pictures?</string>
+    <string name="social_network_hint">Are you bored of installing too many apps? </string>
+    <string name="skip">SKIP</string>
+
+
+
+
+
+    <string name="bigo">www.looksphere.com</string>
+    <string name="facebook_app_id">1575971462631198</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="save">POST</string>
+    <string name="album_name">swachh</string>
+
+    <!-- Swachh post -->
+    <string name="description">Description of the issue</string>
+    <string name="description_hint">Write the detailed explanation here!</string>
+    <string name="landmark">Landmark nearby</string>
+    <string name="landmark_hint">Spot the nearby landmark to the location!</string>
+    <string name="severity">Severity</string>
+
+    <!-- facebook -->
+    <string name="cancelled">Cancelled</string>
+    <string name="cancel">CANCEL</string>
+    <string name="logout">Logout</string>
+    <string name="facebook_login">Log in with Facebook</string>
+    <string name="permission_not_granted">Unable to perform selected action because permissions were not granted.</string>
+    <string name="ok">OK</string>
+    <string name="hello_user">Hello %1$s!</string>
+    <string name="success">Success</string>
+    <string name="successfully_posted_post">Successfully posted \'%1$s\'.\nPost ID: %2$s</string>
+    <string name="error">Error</string>
+    <string name="status_update">Updating status for %1$s at %2$s</string>
+    <string name="photo_post">Photo Post</string>
+    <string name="you_picked">You picked:</string>
+    <string name="no_friends_selected">&lt;No friends selected></string>
+    <string name="no_place_selected">&lt;No place selected></string>
+    <string name="pick_seattle_place">Pick a Seattle Place</string>
+    <string name="exception">Exception: %1$s</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="menu_items">
+        <item>HOME</item>
+        <item>MAP</item>
+        <item>VOLUNTEERING</item>
+        <item>COMPLETED</item>
+        <item>ABOUT US</item>
+        <item>EMAIL US</item>
+        <item>SHARE LOVE</item>
+        <item>SETTINGS</item>
+
+    </string-array>
+    <string-array name="severity_array">
+        <item>High</item>
+        <item>Medium</item>
+        <item>Low</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="menu_icons">
+        <item>@drawable/ic_home</item>
+        <item>@drawable/ic_map</item>
+        <item>@drawable/ic_assigned_white</item>
+        <item>@drawable/ic_completed_white</item>
+        <item>@drawable/ic_aboutus</item>
+        <item>@drawable/ic_email</item>
+        <item>@drawable/ic_share</item>
+        <item>@drawable/ic_settings</item>
+
+    </array>
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_swachh_post">Swachh Post</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_profile">Profile</string>
+
+    <!-- About us -->
+    <string name="about_1">We are a bunch of fellow citizens of INDIA, who wants to see the cleaner India as our Government\'s vision. Swachh is the platform to help us clean our country faster.</string>
+    <string name="about_2">Swachh Bharat or Swachh Bharat Abhiyan (Campaign Clean India) is a national level campaign by the Government of India covering 4041 statutory towns to clean the streets, roads and infrastructure of the country.</string>
+    <string name="about_3">Swachh Bharat Abhiyan was launched by Prime Minister of India Narendra Modi on 2 Oct 2014, Gandhi Jayanti. On this day, Modi addressed the citizens of India in a public gathering held at Rajpath, India and asked everyone to join this campaign. Later on this day, Modi himself swept a pavement at Valmiki Basti, a colony of sanitation workers, near Rajpath.</string>
+    <string name="about_4">Modi government selected nine notable public figures to propagate this campaign. Some of these notable personalities were Anil Ambani, Sachin Tendulkar, Salman Khan, Priyanka Chopra, Ramdev, Kamal Hassan, Mridula Sinha, Sashi Tharoor, The team of TV series Taarak Mehta Ka Ooltah Chashmah. Indian film actor Aamir Khan supported and encouraged this initiative and told that he would be happy if he is invited into this campaign.</string>
+    <string name="about_5">Source: Wikipedia</string>
+    <string name="version">Version</string>
+    <string name="title_activity_comments">  Comments</string>
+    <string name="add_comment">Add your comment here...</string>
+    <string name="swachhthis">Are you interested in volunteering to clean up this place?</string>
+    <string name="title_activity_image_full_view"> Swachh Photo</string>
+    <string name="title_activity_swachh_map"> Swachh Map</string>
+
+    <string name="assigned">Volunteering</string>
+    <string name="completed">Completed</string>
+    <string name="on_web">We are on web</string>
+
+
+    <!-- sharing -->
+    <string name="share_facebook">Share on Facebook</string>
+    <string name="share_twitter">Share on Twitter</string>
+    <string name="share_whatsapp">Share on Whatsapp</string>
+    <string name="share_wechat">Share on WeChat</string>
+    <string name="share_hike">Share on Hike</string>
+    <string name="share_viber">Share on Viber</string>
+    <string name="share_others">Share on other apps</string>
+    <string name="share">Share on</string>
+
+
+    <string name="completed_default_text">There are no completed items as of now! Please wait for sometime or be the first person on the initiative to complete!</string>
+
+
+    <string name="location">Address</string>
+    <string name="title_activity_container">ContainerActivity</string>
+
+
+
+</resources>

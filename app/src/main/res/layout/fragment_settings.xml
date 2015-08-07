@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".LauncherActivity$PlaceholderFragment">
+
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/logout"
+        android:textSize="20sp" />
+
+
+    <LinearLayout
+        android:id="@+id/divider_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/logout"
+        android:layout_marginTop="5dp"
+        android:background="@color/black_overlay"></LinearLayout>
+
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_1"
+        android:padding="10dp"
+        android:text="@string/version"
+        android:textSize="20sp" />
+
+
+    <LinearLayout
+        android:id="@+id/divider_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/version"
+        android:layout_marginTop="5dp"
+        android:background="@color/black_overlay"></LinearLayout>
+
+
+    <TextView
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider_2"
+        android:padding="10dp"
+        android:text="@string/on_web"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/divider_3"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/help"
+        android:layout_marginTop="5dp"
+        android:background="@color/black_overlay"></LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+        <ListView
+            android:id="@+id/listview"
+            android:divider="@color/counter_text_color"
+            android:dividerHeight="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none"
+            android:layout_above="@+id/comment_layout"
+            android:layout_weight="1">
+
+        </ListView>
+
+
+    <LinearLayout
+        android:id="@+id/comment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true"
+        android:padding="0dp"
+        android:stretchColumns="*">
+
+
+        <EditText
+            android:id="@+id/mycomment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:hint="@string/add_comment"
+            android:maxLines="5"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:textColorHint="@android:color/secondary_text_light_nodisable"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:clickable="true"
+            android:layout_toRightOf="@+id/mycomment"
+            android:padding="5dp"
+            android:src="@drawable/comment_send_button" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

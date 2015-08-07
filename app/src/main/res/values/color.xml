@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="light_green">#3eb74e</color>
+    <color name="light_purple">#8c61b3</color>
+    <color name="light_orange">#ffb500</color>
+    <color name="light_cyan">#00BCD4</color>
+
+
+    <color name="app_green">#4CAF50</color>
+    <color name="app_yellow">#FFEB3B</color>
+    <color name="app_light_green">#8BC34A</color>
+    <color name="app_light_blue">#03A9F4</color>
+    <color name="app_cyan">#00BCD4</color>
+    <color name="app_teal">#009688</color>
+    <color name="app_purple">#9C27B0</color>
+    <color name="app_deep_purple">#673AB7</color>
+    <color name="app_indigo">#3F51B5</color>
+    <color name="app_blue">#2196F3</color>
+    <color name="app_pink">#E91E63</color>
+    <color name="app_red">#F44336</color>
+    <color name="app_orange">#FF9800</color>
+    <color name="app_deep_orange">#FF5722</color>
+    <color name="app_brown">#795548</color>
+    <color name="app_grey">#9E9E9E</color>
+    <color name="app_blue_grey">#607D8B</color>
+
+
+    <!-- misc colors -->
+    <color name="googleplus_color">#d34836</color>
+    <color name="facebook_color">#3b5998</color>
+    <color name="semi_trans_color">#77000000</color>
+
+
+    <!-- Theme colors -->
+    <color name="primary">#009688</color>
+    <color name="primary_dark">#00796B</color>
+    <color name="primary_light">#B2DFDB</color>
+    <color name="accent">#FFC107</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#727272</color>
+    <color name="divider">#B6B6B6</color>
+
+
+    <color name="swachh_blue">#2d3e50</color>
+    <color name="light_grey">#f0f0f0</color>
+    <color name="super_light_grey">#f6f6f6</color>
+    <color name="white">#ffffff</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="actionbar_color">#03a9f4</color>
+    <color name="home_background">#e5e5e5</color>
+    <color name="background_color">#333333</color>
+    <color name="splash_text_color">#eaeaea</color>
+    <color name="white_color">#ffffff</color>
+    <color name="login_page_text_color">#727272</color>
+    <color name="list_item_title">#fff</color>
+    <color name="list_background">#1b1b1b</color>
+    <color name="list_background_pressed">#0f0f0f</color>
+    <color name="list_divider">#313131</color>
+    <color name="counter_text_bg">#e51c23</color>
+    <color name="counter_text_color">#c5c4c4</color>
+    <color name="profile_bg">#9c27b0</color>
+    <color name="profile_bg_shadow">#c4c4c4</color>
+    <color name="feed_bg">#fafafa</color>
+    <color name="feed_item_bg">#ffffff</color>
+    <color name="feed_item_border">#c2c3c8</color>
+    <color name="link">#0a80d1</color>
+    <color name="timestamp">#a0a3a7</color>
+    <color name="swachh_post_bg">#673ab7</color>
+    <color name="swachh_post_hintcolor">#673ab7</color>
+    <color name="swachh_post_trans_bg">#55000000</color>
+    <color name="gold">#FAFAD2</color>
+
+
+    <color name="green">#2ecc71</color>
+    <color name="red">#c0392b</color>
+    <color name="blue">#3498db</color>
+    <color name="yellow">#f1c40f</color>
+
+    <!-- Indian flag -->
+    <color name="flat_orange">#F9090E</color>
+    <color name="flat_white">#ecf0f1</color>
+    <color name="flat_green">#1E824C</color>
+
+
+    <!-- color palette -->
+    <color name="color_1">#e00032</color>
+    <color name="color_2">#c51162</color>
+    <color name="color_3">#aa00ff</color>
+    <color name="color_4">#6200ea</color>
+    <color name="color_5">#304ffe</color>
+    <color name="color_6">#00b8d4</color>
+    <color name="color_7">#12c700</color>
+    <color name="color_8">#ffd600</color>
+    <color name="color_9">#dd2c00</color>
+    <color name="color_10">#263238</color>
+
+
+    <color name="window_background">#FFF5F5F5</color>
+
+    <color name="wait_color">#F8BBD0</color>
+
+</resources>

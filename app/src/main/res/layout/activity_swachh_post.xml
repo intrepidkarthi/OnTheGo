@@ -1,0 +1,154 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="in.bigo.cleanindia.activity.SwachhPostActivity">
+
+        <FrameLayout
+            android:id="@+id/swachh_photo_layout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:padding="10dp">
+
+
+            <ImageView
+                android:id="@+id/swachh_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_picture" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="bottom"
+                android:background="@color/swachh_post_trans_bg">
+
+
+                <TextView
+                    android:id="@+id/location_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:text="India"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                     />
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/description_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/swachh_photo_layout"
+
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="5dp"
+                android:text="@string/description"
+                android:textColor="@color/swachh_blue"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/description_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/description"
+                android:layout_centerVertical="true"
+                android:hint="@string/description_hint"
+                android:maxLines="3"
+                android:imeOptions="actionNext"
+                android:padding="5dp"
+                android:textColor="@color/black_overlay"
+                android:textColorHint="@android:color/secondary_text_light_nodisable"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/landmark_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description_layout"
+
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/landmark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="5dp"
+                android:text="@string/landmark"
+                android:textColor="@color/swachh_blue"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/landmark_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/landmark"
+                android:layout_centerVertical="true"
+                android:hint="@string/landmark_hint"
+                android:maxLines="3"
+                android:padding="5dp"
+                android:imeOptions="actionNext"
+                android:textColor="@color/black_overlay"
+                android:textColorHint="@android:color/secondary_text_light_nodisable"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/severity_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/landmark_layout"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/severity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:padding="5dp"
+                android:text="@string/severity"
+                android:textColor="@color/swachh_blue"
+                android:textSize="14sp" />
+
+            <Spinner
+                android:id="@+id/severity_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="end" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

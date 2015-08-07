@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LauncherActivity">
+
+    android:id="@+id/action_assigned"
+    android:icon="@drawable/ic_assigned"
+    android:title="@string/assigned"
+    android:orderInCategory="0"
+    app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_completed"
+        android:icon="@drawable/ic_completed"
+        android:orderInCategory="0"
+        android:title="@string/completed"
+        app:showAsAction="always" />
+</menu>

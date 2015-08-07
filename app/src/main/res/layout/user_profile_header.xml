@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/swachh_blue"
+    android:orientation="vertical">
+
+    <in.bigo.cleanindia.customview.RoundedImageView
+        android:id="@+id/userIcon"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_aboutus" />
+
+    <TextView
+        android:id="@+id/userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:paddingBottom="5dp"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/userPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userName"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:paddingBottom="10dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="italic" />
+
+    <LinearLayout
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/userPosts"
+        android:background="@color/login_page_text_color"></LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/shadow"
+        android:background="@color/profile_bg_shadow"></LinearLayout>
+
+
+
+</RelativeLayout>
+
+
+
