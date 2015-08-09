@@ -11,10 +11,5 @@ $ ./gradlew assembleDebug
 
 A few screenshots
 
-![screenshots](https://raw.githubusercontent.com/intrepidkarthi/OnTheGo/master/screenshots/Screenshot_2015-08-09-10-51-44.png)
-![screenshots](https://raw.githubusercontent.com/intrepidkarthi/OnTheGo/master/screenshots/Screenshot_2015-08-09-10-51-44.png)
-![screenshots](https://raw.githubusercontent.com/intrepidkarthi/OnTheGo/master/screenshots/Screenshot_2015-08-09-10-51-44.png)
-![screenshots](https://raw.githubusercontent.com/intrepidkarthi/OnTheGo/master/screenshots/Screenshot_2015-08-09-10-51-44.png)
-![screenshots](https://raw.githubusercontent.com/intrepidkarthi/OnTheGo/master/screenshots/Screenshot_2015-08-09-10-51-44.png)
-![screenshots](https://raw.githubusercontent.com/intrepidkarthi/OnTheGo/master/screenshots/Screenshot_2015-08-09-10-51-44.png)
-![screenshots](https://raw.githubusercontent.com/intrepidkarthi/OnTheGo/master/screenshots/Screenshot_2015-08-09-10-51-44.png)
+![screenshots](https://raw.githubusercontent.com/intrepidkarthi/OnTheGo/master/screenshots/Screenshot_2015-08-09-10-51-44.png ) {:.some-css-class width="200"}
+
