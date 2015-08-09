@@ -6,33 +6,33 @@
                 android:id="@+id/nav_home"
                 android:icon="@drawable/ic_home"
                 android:title="Home" />
+            <!--<item-->
+                <!--android:id="@+id/nav_maps"-->
+                <!--android:icon="@drawable/ic_map"-->
+                <!--android:title="Maps" />-->
             <item
-                android:id="@+id/nav_messages"
-                android:icon="@drawable/ic_map"
-                android:title="Maps" />
-            <item
-                android:id="@+id/nav_friends"
+                android:id="@+id/nav_volunteering"
                 android:icon="@drawable/ic_assigned_white"
                 android:title="Volunteering" />
             <item
-                android:id="@+id/nav_discussion"
+                android:id="@+id/nav_completed"
                 android:icon="@drawable/ic_completed_white"
                 android:title="Completed" />
             <item
-                android:id="@+id/nav_redeem1"
+                android:id="@+id/nav_aboutus"
                 android:icon="@drawable/ic_aboutus"
                 android:title="About us" />
 
             <item
-                android:id="@+id/nav_redeem2"
+                android:id="@+id/nav_email"
                 android:icon="@drawable/ic_email"
                 android:title="Email us" />
             <item
-                android:id="@+id/nav_redeem3"
+                android:id="@+id/nav_share"
                 android:icon="@drawable/ic_share"
                 android:title="Share love" />
             <item
-                android:id="@+id/nav_redeem4"
+                android:id="@+id/nav_settings"
                 android:icon="@drawable/ic_settings"
                 android:title="Settings" />
 

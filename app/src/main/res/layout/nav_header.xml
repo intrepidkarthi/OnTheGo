@@ -22,12 +22,12 @@
         app:roundAsCircle="true" />
 
 -->
-    <ImageView
+    <com.looksphere.goindia.customview.RoundedImageView
         android:id="@+id/profile_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/web_hi_res_512" />
+        android:src="@drawable/karthik" />
 
 
     <TextView
@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:textColor="@android:color/white"
-        android:text="Username"
+        android:text="Karthikeyan NG"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
 </LinearLayout>

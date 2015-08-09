@@ -22,7 +22,7 @@
         android:orientation="vertical">
 
 
-        <in.bigo.cleanindia.customview.EndlessListView
+        <com.looksphere.goindia.customview.EndlessListView
             android:id="@+id/endlesslist"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"

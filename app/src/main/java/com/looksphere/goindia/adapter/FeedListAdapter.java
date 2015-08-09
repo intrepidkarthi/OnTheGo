@@ -1,5 +1,9 @@
 package com.looksphere.goindia.adapter;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -10,6 +14,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.OvershootInterpolator;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -23,8 +29,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.looksphere.goindia.R;
-import com.looksphere.goindia.activity.CommentsActivity;
 import com.looksphere.goindia.activity.SwachhMapActivity;
+import com.looksphere.goindia.chat.ChatActivity;
 import com.looksphere.goindia.controller.SharedPreferencesController;
 import com.looksphere.goindia.customview.RoundedImageView;
 import com.looksphere.goindia.model.SwachhFeedItem;
@@ -44,6 +50,9 @@ public class FeedListAdapter extends BaseAdapter {
     private List<SwachhFeedItem> feedItems;
     ImageLoader imageLoader;
     SharedPreferencesController sharedPreferencesController;
+    private static final AccelerateInterpolator ACCELERATE_INTERPOLATOR = new AccelerateInterpolator();
+    private static final OvershootInterpolator OVERSHOOT_INTERPOLATOR = new OvershootInterpolator(4);
+    //private final Map<RecyclerView.ViewHolder, AnimatorSet> likeAnimations = new HashMap<>();
 
     public FeedListAdapter(Activity activity, List<SwachhFeedItem> feedItems) {
         this.activity = activity;
@@ -218,15 +227,15 @@ public class FeedListAdapter extends BaseAdapter {
             public void onClick(View v) {
 
 
-                Intent intent = new Intent(activity, CommentsActivity.class);
-                if (item.getCommentsCount() > 0) {
-                    intent.putExtra("comments", item.getCommentItems());
-                    intent.putExtra("feedId", item.getId());
-                    intent.putExtra("data", true);
-                } else {
-                    intent.putExtra("data", false);
-                    intent.putExtra("feedId", item.getId());
-                }
+                Intent intent = new Intent(activity, ChatActivity.class);
+//                if (item.getCommentsCount() > 0) {
+//                    intent.putExtra("comments", item.getCommentItems());
+//                    intent.putExtra("feedId", item.getId());
+//                    intent.putExtra("data", true);
+//                } else {
+//                    intent.putExtra("data", false);
+//                    intent.putExtra("feedId", item.getId());
+//                }
                 activity.startActivity(intent);
                 activity.overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 
@@ -285,6 +294,43 @@ public class FeedListAdapter extends BaseAdapter {
                 AppController.getInstance(activity.getApplicationContext()).addToRequestQueue(req);
 
 
+
+                AnimatorSet animatorSet = new AnimatorSet();
+                //likeAnimations.put(holder, animatorSet);
+
+                ObjectAnimator rotationAnim = ObjectAnimator.ofFloat(holder.like, "rotation", 0f, 360f);
+                rotationAnim.setDuration(300);
+                rotationAnim.setInterpolator(ACCELERATE_INTERPOLATOR);
+
+                ObjectAnimator bounceAnimX = ObjectAnimator.ofFloat(holder.like, "scaleX", 0.2f, 1f);
+                bounceAnimX.setDuration(300);
+                bounceAnimX.setInterpolator(OVERSHOOT_INTERPOLATOR);
+
+                ObjectAnimator bounceAnimY = ObjectAnimator.ofFloat(holder.like, "scaleY", 0.2f, 1f);
+                bounceAnimY.setDuration(300);
+                bounceAnimY.setInterpolator(OVERSHOOT_INTERPOLATOR);
+                bounceAnimY.addListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationStart(Animator animation) {
+                        holder.like.setImageResource(R.drawable.ic_heart_click);
+                    }
+                });
+
+                animatorSet.play(rotationAnim);
+                animatorSet.play(bounceAnimX).with(bounceAnimY).after(rotationAnim);
+
+//                animatorSet.addListener(new AnimatorListenerAdapter() {
+//                    @Override
+//                    public void onAnimationEnd(Animator animation) {
+//                        resetLikeAnimationState(holder);
+//                    }
+//                });
+
+                animatorSet.start();
+
+
+
+
             }
         });
 
@@ -294,15 +340,15 @@ public class FeedListAdapter extends BaseAdapter {
             public void onClick(View v) {
 
                 Log.d("comment count", "" + item.getCommentsCount());
-                Intent intent = new Intent(activity, CommentsActivity.class);
-                if (item.getCommentsCount() > 0) {
-                    intent.putExtra("comments", item.getCommentItems());
-                    intent.putExtra("feedId", item.getId());
-                    intent.putExtra("data", true);
-                } else {
-                    intent.putExtra("data", false);
-                    intent.putExtra("feedId", item.getId());
-                }
+                Intent intent = new Intent(activity, ChatActivity.class);
+//                if (item.getCommentsCount() > 0) {
+//                    intent.putExtra("comments", item.getCommentItems());
+//                    intent.putExtra("feedId", item.getId());
+//                    intent.putExtra("data", true);
+//                } else {
+//                    intent.putExtra("data", false);
+//                    intent.putExtra("feedId", item.getId());
+//                }
                 activity.startActivity(intent);
                 activity.overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 

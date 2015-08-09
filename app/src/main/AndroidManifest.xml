@@ -69,17 +69,25 @@
         </activity>
         <activity android:name=".activity.LauncherActivity" >
         </activity>
+        <activity android:name=".chat.ChatActivity"
+            android:theme="@style/NormalTheme">
+        </activity>
         <activity
             android:name=".activity.MainActivity"
             android:label="OnTheGo" >
         </activity>
-        <activity android:name=".activity.ProfileActivity" >
+        <activity android:name=".activity.ProfileActivity"
+            android:label="Profile"
+            android:theme="@style/NormalTheme">
         </activity>
         <activity android:name=".activity.SwachhPostActivity"
             android:label="Post OnTheGo"
             android:theme="@style/NormalTheme">
         </activity>
-        <activity android:name=".activity.SwachhMapActivity" >
+        <activity android:name=".activity.SwachhMapActivity"
+            android:label="Location"
+            android:theme="@style/NormalTheme"
+            >
         </activity>
 
         <meta-data
@@ -95,13 +103,9 @@
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
-        <!-- <meta-data -->
-        <!-- android:name="com.google.android.maps.v2.API_KEY" -->
-        <!-- android:value="AF:29:DC:4A:8C:BA:D8:49:70:7A:41:23:0E:38:FB:4B:06:E5:B0:2A;com.looksphere.goindia" /> -->
-
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDHmvoNaKkAtFKF95H9BkWueXzG0t4Cles" />
+            android:value="your key here" />
 
         <service android:name="com.parse.PushService" />
 

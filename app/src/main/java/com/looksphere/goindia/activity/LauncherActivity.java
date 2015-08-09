@@ -2,8 +2,6 @@ package com.looksphere.goindia.activity;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
@@ -15,13 +13,7 @@ import android.view.MenuItem;
 
 import com.looksphere.goindia.R;
 import com.looksphere.goindia.application.SwachhApplication;
-import com.looksphere.goindia.fragment.AboutUsFragment;
-import com.looksphere.goindia.fragment.EmailFragment;
 import com.looksphere.goindia.fragment.NavigationDrawerFragment;
-import com.looksphere.goindia.fragment.SettingsFragment;
-import com.looksphere.goindia.fragment.ShareFragment;
-import com.looksphere.goindia.fragment.SwachhMapFragment;
-import com.looksphere.goindia.fragment.VolunteeringFragment;
 
 
 public class LauncherActivity extends Activity
@@ -90,49 +82,49 @@ public class LauncherActivity extends Activity
     @Override
     public void onNavigationDrawerItemSelected(int position) {
 
-        Fragment fragment = null;
-        switch (position) {
-//            case 0:
-//                fragment = HomeFragment.newInstance();
-//                fragmentCounter = 0;
+//        Fragment fragment = null;
+//        switch (position) {
+////            case 0:
+////                fragment = HomeFragment.newInstance();
+////                fragmentCounter = 0;
+////                break;
+//            case 1:
+//                fragment = SwachhMapFragment.newInstance();
+//                fragmentCounter = 1;
 //                break;
-            case 1:
-                fragment = SwachhMapFragment.newInstance();
-                fragmentCounter = 1;
-                break;
-            case 2:
-                fragment = VolunteeringFragment.newInstance();
-                fragmentCounter = 2;
-                break;
-//            case 3:
-//                fragment = CompletedFragment.newInstance();
-//                fragmentCounter = 3;
+//            case 2:
+//                fragment = VolunteeringFragment.newInstance();
+//                fragmentCounter = 2;
 //                break;
-            case 4:
-                fragment = AboutUsFragment.newInstance();
-                fragmentCounter = 4;
-                break;
-            case 5:
-                fragment = EmailFragment.newInstance();
-                fragmentCounter = 5;
-                break;
-            case 6:
-                fragment = ShareFragment.newInstance();
-                fragmentCounter = 6;
-                break;
-            case 7:
-                fragment = SettingsFragment.newInstance();
-                fragmentCounter = 7;
-                break;
-
-        }
-
-
-        // update the main content by replacing fragments
-        FragmentManager fragmentManager = getFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, fragment)
-                .commit();
+////            case 3:
+////                fragment = CompletedFragment.newInstance();
+////                fragmentCounter = 3;
+////                break;
+//            case 4:
+//                fragment = AboutUsFragment.newInstance();
+//                fragmentCounter = 4;
+//                break;
+//            case 5:
+//                fragment = EmailFragment.newInstance();
+//                fragmentCounter = 5;
+//                break;
+//            case 6:
+//                fragment = ShareFragment.newInstance();
+//                fragmentCounter = 6;
+//                break;
+//            case 7:
+//                fragment = SettingsFragment.newInstance();
+//                fragmentCounter = 7;
+//                break;
+//
+//        }
+//
+//
+//        // update the main content by replacing fragments
+//        FragmentManager fragmentManager = getFragmentManager();
+//        fragmentManager.beginTransaction()
+//                .replace(R.id.container, fragment)
+//                .commit();
     }
 
     public void onSectionAttached(int number) {
@@ -204,41 +196,41 @@ public class LauncherActivity extends Activity
         int id = item.getItemId();
 
 
-        switch(id)
-        {
-            case R.id.action_assigned:
-                mTitle = menuItems[2];
-                SpannableString s = new SpannableString(mTitle);
-                s.setSpan(SwachhApplication.roboticThin, 0, s.length(),
-                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                getActionBar().setTitle(s);
-
-                Fragment assignedFragment = null;
-                assignedFragment = VolunteeringFragment.newInstance();
-                fragmentCounter = 0;
-                // update the main content by replacing fragments
-                FragmentManager fragmentManager = getFragmentManager();
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, assignedFragment)
-                        .commit();
-                break;
-            case R.id.action_completed:
-                mTitle = menuItems[3];
-                SpannableString ss = new SpannableString(mTitle);
-                ss.setSpan(SwachhApplication.roboticThin, 0, ss.length(),
-                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-                getActionBar().setTitle(ss);
-
-                Fragment completedFragment = null;
-//               // completedFragment = CompletedFragment.newInstance();
+//        switch(id)
+//        {
+//            case R.id.action_assigned:
+//                mTitle = menuItems[2];
+//                SpannableString s = new SpannableString(mTitle);
+//                s.setSpan(SwachhApplication.roboticThin, 0, s.length(),
+//                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//                getActionBar().setTitle(s);
+//
+//                Fragment assignedFragment = null;
+//                assignedFragment = VolunteeringFragment.newInstance();
 //                fragmentCounter = 0;
 //                // update the main content by replacing fragments
-//                FragmentManager completedFragmentManager = getFragmentManager();
-//                completedFragmentManager.beginTransaction()
-//                        .replace(R.id.container, completedFragment)
+//                FragmentManager fragmentManager = getFragmentManager();
+//                fragmentManager.beginTransaction()
+//                        .replace(R.id.container, assignedFragment)
 //                        .commit();
-                break;
-        }
+//                break;
+//            case R.id.action_completed:
+//                mTitle = menuItems[3];
+//                SpannableString ss = new SpannableString(mTitle);
+//                ss.setSpan(SwachhApplication.roboticThin, 0, ss.length(),
+//                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//                getActionBar().setTitle(ss);
+//
+//                Fragment completedFragment = null;
+////               // completedFragment = CompletedFragment.newInstance();
+////                fragmentCounter = 0;
+////                // update the main content by replacing fragments
+////                FragmentManager completedFragmentManager = getFragmentManager();
+////                completedFragmentManager.beginTransaction()
+////                        .replace(R.id.container, completedFragment)
+////                        .commit();
+//                break;
+//        }
 
         return super.onOptionsItemSelected(item);
     }

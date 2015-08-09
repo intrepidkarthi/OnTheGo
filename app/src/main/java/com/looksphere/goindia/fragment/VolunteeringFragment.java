@@ -2,9 +2,9 @@ package com.looksphere.goindia.fragment;
 
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.View;
@@ -18,6 +18,15 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.looksphere.goindia.R;
+import com.looksphere.goindia.activity.MainActivity;
+import com.looksphere.goindia.adapter.FeedListAdapter;
+import com.looksphere.goindia.controller.SharedPreferencesController;
+import com.looksphere.goindia.customview.EndlessListView;
+import com.looksphere.goindia.model.SwachhFeedItem;
+import com.looksphere.goindia.utils.AppConstants;
+import com.looksphere.goindia.utils.AppController;
+import com.looksphere.goindia.utils.GPSTracker;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,19 +37,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import com.looksphere.goindia.R;
-import com.looksphere.goindia.activity.LauncherActivity;
-import com.looksphere.goindia.adapter.FeedListAdapter;
-import com.looksphere.goindia.controller.SharedPreferencesController;
-import com.looksphere.goindia.customview.EndlessListView;
-import com.looksphere.goindia.model.SwachhFeedItem;
-import com.looksphere.goindia.utils.AppConstants;
-import com.looksphere.goindia.utils.AppController;
-import com.looksphere.goindia.utils.GPSTracker;
-
 public class VolunteeringFragment extends Fragment implements View.OnClickListener, EndlessListView.EndLessListener {
 
-    LauncherActivity activityVolunteeringFragment;
+    MainActivity activityVolunteeringFragment;
     private ImageView swachhButton;
     private View rootView;
     private int API_OFFSET = 1;
@@ -401,13 +400,12 @@ public class VolunteeringFragment extends Fragment implements View.OnClickListen
         super.onAttach(activity);
 
         try {
-            activityVolunteeringFragment = ((LauncherActivity) activity);
-            activityVolunteeringFragment.onSectionAttached(
-                    2);
+            activityVolunteeringFragment = ((MainActivity) activity);
+
         } catch (Exception e) {
             e.printStackTrace();
             getActivity().finish();
-            Intent newIntent = new Intent(getActivity(), LauncherActivity.class);
+            Intent newIntent = new Intent(getActivity(), MainActivity.class);
             startActivity(newIntent);
 
         }

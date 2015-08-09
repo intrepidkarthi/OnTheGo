@@ -1,16 +1,16 @@
 package com.looksphere.goindia.fragment;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.looksphere.goindia.R;
-import com.looksphere.goindia.activity.LauncherActivity;
+import com.looksphere.goindia.activity.MainActivity;
 import com.looksphere.goindia.application.SwachhApplication;
 
 /**
@@ -20,7 +20,7 @@ public class AboutUsFragment extends Fragment {
 
     private TextView about_one, about_two, about_three, about_four, about_five;
     View rootView;
-    LauncherActivity activityAboutUsFragment;
+    MainActivity activityAboutUsFragment;
 
     public AboutUsFragment() {
     }
@@ -64,13 +64,12 @@ public class AboutUsFragment extends Fragment {
         super.onAttach(activity);
 
         try {
-            activityAboutUsFragment = ((LauncherActivity) activity);
-            activityAboutUsFragment.onSectionAttached(
-                    4);
+            activityAboutUsFragment = ((MainActivity) activity);
+
         } catch (Exception e) {
             e.printStackTrace();
             getActivity().finish();
-            Intent newIntent = new Intent(getActivity(), LauncherActivity.class);
+            Intent newIntent = new Intent(getActivity(), MainActivity.class);
             startActivity(newIntent);
 
 

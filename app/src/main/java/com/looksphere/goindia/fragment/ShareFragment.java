@@ -1,13 +1,13 @@
 package com.looksphere.goindia.fragment;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +18,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.looksphere.goindia.R;
-import com.looksphere.goindia.activity.LauncherActivity;
+import com.looksphere.goindia.activity.MainActivity;
 import com.looksphere.goindia.adapter.FriendsAdapter;
 import com.looksphere.goindia.controller.SharedPreferencesController;
 import com.looksphere.goindia.model.TaggableFriends;
@@ -30,7 +30,7 @@ import java.util.List;
 
 public class ShareFragment extends Fragment implements View.OnClickListener{
 
-    LauncherActivity activityShareFragment;
+    MainActivity activityShareFragment;
     private SharedPreferencesController sharedPreferencesController;
     private String accessToken = "";
     //Session activeSession;
@@ -335,13 +335,12 @@ public class ShareFragment extends Fragment implements View.OnClickListener{
         super.onAttach(activity);
 
         try {
-            activityShareFragment = ((LauncherActivity) activity);
-            activityShareFragment.onSectionAttached(
-                    6);
+            activityShareFragment = ((MainActivity) activity);
+
         } catch (Exception e) {
             e.printStackTrace();
             getActivity().finish();
-            Intent newIntent = new Intent(getActivity(), LauncherActivity.class);
+            Intent newIntent = new Intent(getActivity(), MainActivity.class);
             startActivity(newIntent);
 
         }

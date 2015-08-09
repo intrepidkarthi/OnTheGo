@@ -13,13 +13,6 @@ public class Constants {
     public static String thinFont = "fonts/BebasNeueThin.ttf";
 
 
-    public static String CLOUDINARY_CLOUD_NAME = "bigo";
-    public static String CLOUDINARY_API_KEY = "374235891142379";
-    public static String CLOUDINARY_API_SECRET = "nmGCjZVElJrQSZsrp-MWVDmaXJk";
-    public static String CLOUDINARY_BASE_URL = "http://res.cloudinary.com/bigo/image/upload/v1434912709/";
-
-
-
 
 
 

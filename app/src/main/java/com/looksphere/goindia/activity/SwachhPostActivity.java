@@ -173,9 +173,9 @@ public class SwachhPostActivity extends Activity implements View.OnClickListener
 
         //Cloudinary
         Map config = new HashMap();
-        config.put("cloud_name", "bigo");
-        config.put("api_key", "374235891142379");
-        config.put("api_secret", "nmGCjZVElJrQSZsrp-MWVDmaXJk");
+        config.put("cloud_name", "yourcloudname");
+        config.put("api_key", "yourkey");
+        config.put("api_secret", "yoursecret");
         cloudinary = new Cloudinary(config);
         capture = new CapturePhoto(this);
         sharedPreferencesController = SharedPreferencesController.getSharedPreferencesController(this);

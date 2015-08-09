@@ -3,7 +3,9 @@ package com.looksphere.goindia.global;
 import android.app.Application;
 import android.content.Context;
 import android.graphics.Typeface;
+import android.support.multidex.MultiDex;
 
+import com.firebase.client.Firebase;
 import com.looksphere.goindia.R;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -12,7 +14,6 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.parse.Parse;
 import com.parse.ParseInstallation;
-import com.parse.ParsePush;
 
 /**
  * Created by SPARK on 09/06/15.
@@ -27,12 +28,19 @@ public class OnTheGoApp extends Application {
     }
 
     @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
+
+    @Override
     public void onCreate() {
         super.onCreate();
         //initGlobalModelStore();
+        Firebase.setAndroidContext(this);
         setupImageDownloader();
         Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "cIHxT0e0QYq8ryvmP45zjlUsQIVnSoKr9eDRZ55F", "m9neclWS6n7RGl8fLtZYKQWmWe4o9yFIXCExECDe");
+        Parse.initialize(this, "Yourapi", "yourkey");
 
         // Specify an Activity to handle all pushes by default.
         //PushService.setDefaultPushCallback(this, SplashActivity.class);
@@ -42,7 +50,7 @@ public class OnTheGoApp extends Application {
         roboticLight = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
         abelRegular = Typeface.createFromAsset(getAssets(), "fonts/Abel-Regular.ttf");
 
-        ParsePush.subscribeInBackground("swachh_broadcast");
+
 
         // Associate the device with a user
         ParseInstallation installation = ParseInstallation.getCurrentInstallation();

@@ -3,7 +3,7 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/swachh_blue"
+    android:background="@color/swachh_post_bg"
     android:orientation="vertical">
 
     <RelativeLayout
@@ -12,7 +12,8 @@
 
         android:orientation="vertical">
 
-        <in.bigo.cleanindia.customview.RoundedImageView
+        <com.looksphere.goindia.customview.RoundedImageView
+
             android:id="@+id/userIcon"
             android:layout_width="130dp"
             android:layout_height="130dp"
@@ -202,7 +203,7 @@
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
                     android:layout_marginTop="15dp"
-                    android:text="Completed Swachh"
+                    android:text="Completed"
                     android:textColor="@android:color/white"
                     android:textSize="20sp" />
 

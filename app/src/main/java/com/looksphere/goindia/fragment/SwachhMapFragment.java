@@ -6,10 +6,10 @@ package com.looksphere.goindia.fragment;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Fragment;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,13 +23,14 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.looksphere.goindia.R;
 import com.looksphere.goindia.activity.LauncherActivity;
+import com.looksphere.goindia.activity.MainActivity;
 import com.looksphere.goindia.controller.SharedPreferencesController;
 import com.looksphere.goindia.utils.AppConstants;
 import com.looksphere.goindia.utils.AppController;
@@ -44,7 +45,7 @@ public class SwachhMapFragment extends Fragment {
 
     private GoogleMap googleMap;
     private GPSTracker gps;
-LauncherActivity activitySwachhMapFragment;
+MainActivity activitySwachhMapFragment;
     private SharedPreferencesController sharedPreferencesController;
     private double latitude;
     private double longitude;
@@ -139,7 +140,7 @@ LauncherActivity activitySwachhMapFragment;
 
     private void initilizeMap() {
         if (googleMap == null) {
-            googleMap = ((MapFragment) getFragmentManager().findFragmentById(
+            googleMap = ((SupportMapFragment) getFragmentManager().findFragmentById(
                     R.id.map)).getMap();
 
             // check if map is created successfully or not
@@ -231,9 +232,9 @@ LauncherActivity activitySwachhMapFragment;
         super.onAttach(activity);
 
         try {
-            activitySwachhMapFragment = ((LauncherActivity) activity);
-            activitySwachhMapFragment.onSectionAttached(
-                    1);
+            activitySwachhMapFragment = ((MainActivity) activity);
+//            activitySwachhMapFragment.onSectionAttached(
+//                    1);
         } catch (Exception e) {
             e.printStackTrace();
             getActivity().finish();

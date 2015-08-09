@@ -79,6 +79,48 @@
             android:textStyle="italic" />
 
 
+        <TextView
+            android:id="@+id/mp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollHorizontally="true"
+            android:text="Member of parliament"
+            android:textColor="@color/background_color"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/mp_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:text="P.C.Mohan"
+            android:textColor="@color/background_color"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/mp_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollHorizontally="true"
+            android:text="Member of parliament contact"
+            android:textColor="@color/background_color"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/mp_contact_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3"
+            android:text="011 41044204"
+            android:textColor="@color/background_color"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
     </LinearLayout>
 
 

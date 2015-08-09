@@ -2,13 +2,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/semi_trans_color"
+    android:background="@color/app_yellow"
     tools:context="in.bigo.yourdeals.ui.activity.LoginActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/semi_trans_color"></FrameLayout>
+        >
+
+        <ImageView
+            android:id="@+id/applogo"
+            android:layout_width="200dp"
+            android:scaleType="fitXY"
+            android:layout_height="200dp"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/web_hi_res_512" />
+
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,6 +50,7 @@
                 android:gravity="center"
                 android:clickable="false"
                 android:textSize="16sp"
+                android:textColor="@android:color/white"
                 android:text="Login with Google+">
 
             </Button>
@@ -65,6 +77,7 @@
                 android:text="Login with Facebook"
                 android:gravity="center"
                 android:textSize="16sp"
+                android:textColor="@android:color/white"
                 android:clickable="false"
                 android:background="@color/facebook_color">
 
@@ -90,6 +103,7 @@
                 android:textSize="16sp"
                 android:text="Login with Email"
                 android:gravity="center"
+                android:textColor="@android:color/white"
                 android:background="@color/app_green">
 
 

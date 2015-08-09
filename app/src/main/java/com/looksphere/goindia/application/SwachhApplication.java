@@ -9,6 +9,7 @@ import android.graphics.Typeface;
 import android.util.Base64;
 import android.util.Log;
 
+import com.looksphere.goindia.R;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -20,8 +21,6 @@ import com.parse.ParsePush;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-
-import com.looksphere.goindia.R;
 
 public class SwachhApplication extends android.app.Application {
 
@@ -58,7 +57,7 @@ public class SwachhApplication extends android.app.Application {
 
     public void setupImageDownloader() {
         DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
-                .showImageOnLoading(R.drawable.download) // resource or drawable
+                .showImageOnLoading(R.color.swachh_post_bg) // resource or drawable
                 .showImageForEmptyUri(R.drawable.download) // resource or drawable
                 .showImageOnFail(R.drawable.error) // resource or drawable
                 .resetViewBeforeLoading(false)  // default

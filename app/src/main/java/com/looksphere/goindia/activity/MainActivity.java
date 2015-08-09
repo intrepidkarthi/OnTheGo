@@ -20,7 +20,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -36,8 +35,14 @@ import android.view.View;
 
 import com.google.android.gms.maps.SupportMapFragment;
 import com.looksphere.goindia.R;
+import com.looksphere.goindia.customview.RoundedImageView;
+import com.looksphere.goindia.fragment.AboutUsFragment;
 import com.looksphere.goindia.fragment.CompletedFragment;
+import com.looksphere.goindia.fragment.EmailFragment;
 import com.looksphere.goindia.fragment.HomeFragment;
+import com.looksphere.goindia.fragment.SettingsFragment;
+import com.looksphere.goindia.fragment.ShareFragment;
+import com.looksphere.goindia.fragment.VolunteeringFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int DEFAULT_PAGES = 2;
     private DrawerLayout mDrawerLayout;
+    int fragmentCounter = 0;
+    RoundedImageView profileImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +70,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        profileImage = (RoundedImageView) findViewById(R.id.profile_image);
+        profileImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+                startActivity(i);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            }
+        });
 
         final NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         if (navigationView != null) {
@@ -70,12 +87,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        if (fragmentCounter == 0) {
 
-        if (viewPager != null) {
-            setupViewPager(viewPager);
-            tabLayout.setupWithViewPager(viewPager);
+            Fragment fragment = null;
+            fragment = HomeFragment.newInstance();
+            fragmentCounter = 0;
+            // update the main content by replacing fragments
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.container, fragment)
+                    .commit();
         }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -105,12 +126,67 @@ public class MainActivity extends AppCompatActivity {
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);
                 return true;
-            case R.id.nav_friends:
-                Intent parallaxViewIntent = new Intent(this, CommentsActivity.class);
+            case R.id.profile_image:
+                Intent parallaxViewIntent = new Intent(this, ProfileActivity.class);
                 startActivity(parallaxViewIntent);
                 return true;
+
+            case R.id.action_assigned:
+                //mTitle = menuItems[2];
+//                SpannableString s = new SpannableString(mTitle);
+//                s.setSpan(SwachhApplication.roboticThin, 0, s.length(),
+//                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//                getActionBar().setTitle(s);
+
+                Fragment assignedFragment = null;
+                assignedFragment = VolunteeringFragment.newInstance();
+                fragmentCounter = 0;
+                // update the main content by replacing fragments
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, assignedFragment)
+                        .commit();
+                break;
+            case R.id.action_completed:
+                //mTitle = menuItems[3];
+//                SpannableString ss = new SpannableString(mTitle);
+//                ss.setSpan(SwachhApplication.roboticThin, 0, ss.length(),
+//                        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+//                getActionBar().setTitle(ss);
+
+                try {
+
+                    Fragment completedFragment = null;
+                    // completedFragment = CompletedFragment.newInstance();
+                    fragmentCounter = 0;
+                    // update the main content by replacing fragments
+                    FragmentManager completedFragmentManager = getSupportFragmentManager();
+                    completedFragmentManager.beginTransaction()
+                            .replace(R.id.container, completedFragment)
+                            .commit();
+                }
+                catch(Exception e){}
+                break;
+
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //when coming from other activities
+        if (fragmentCounter == 0) {
+
+            Fragment fragment = null;
+            fragment = HomeFragment.newInstance();
+            fragmentCounter = 0;
+            // update the main content by replacing fragments
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.container, fragment)
+                    .commit();
+        }
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -130,6 +206,58 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         menuItem.setChecked(true);
                         mDrawerLayout.closeDrawers();
+
+
+
+                            Fragment fragment = null;
+                            switch (menuItem.getItemId()) {
+                                case R.id.nav_home:
+                                    fragment = HomeFragment.newInstance();
+                                    fragmentCounter = 0;
+                                    break;
+//                                case R.id.nav_maps:
+//                                    fragment = SwachhMapFragment.newInstance();
+//                                    fragmentCounter = 1;
+//                                    break;
+                                case R.id.nav_volunteering:
+                                    fragment = VolunteeringFragment.newInstance();
+                                    fragmentCounter = 2;
+                                    break;
+                                case R.id.nav_completed:
+                                    fragment = CompletedFragment.newInstance();
+                                    fragmentCounter = 3;
+                                    break;
+                                case R.id.nav_aboutus:
+                                    fragment = AboutUsFragment.newInstance();
+                                    fragmentCounter = 4;
+                                    break;
+                                case R.id.nav_email:
+                                    fragment = EmailFragment.newInstance();
+                                    fragmentCounter = 5;
+                                    break;
+                                case R.id.nav_share:
+                                    fragment = ShareFragment.newInstance();
+                                    fragmentCounter = 6;
+                                    break;
+                                case R.id.nav_settings:
+                                    fragment = SettingsFragment.newInstance();
+                                    fragmentCounter = 7;
+                                    break;
+
+                            }
+
+
+                            // update the main content by replacing fragments
+                            FragmentManager fragmentManager = getSupportFragmentManager();
+                            fragmentManager.beginTransaction()
+                                    .replace(R.id.container, fragment)
+                                    .commit();
+
+
+
+
+
+
                         return true;
                     }
                 });

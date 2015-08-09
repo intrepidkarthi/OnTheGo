@@ -1,12 +1,12 @@
 package com.looksphere.goindia.fragment;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,9 +20,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.looksphere.goindia.R;
-import com.looksphere.goindia.activity.LauncherActivity;
-import com.looksphere.goindia.controller.SharedPreferencesController;
+import com.looksphere.goindia.activity.MainActivity;
 import com.looksphere.goindia.activity.SplashActivity;
+import com.looksphere.goindia.controller.SharedPreferencesController;
 import com.looksphere.goindia.utils.AppConstants;
 import com.looksphere.goindia.utils.AppController;
 
@@ -34,7 +34,7 @@ import java.util.Map;
 public class SettingsFragment extends Fragment {
 
 
-    private LauncherActivity activitySettingsFragment;
+    private MainActivity activitySettingsFragment;
     private TextView logoutButton;
     private View rootView;
     private PackageManager packageManager;
@@ -78,6 +78,8 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //callFacebookLogout(getActivity());
+                clearPreferences() ;
+                launchSplashActivity();
             }
         });
 
@@ -92,7 +94,7 @@ public class SettingsFragment extends Fragment {
         helpText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.swachh.org"));
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.looksphere.com"));
                 startActivity(browserIntent);
             }
         });
@@ -192,13 +194,12 @@ public class SettingsFragment extends Fragment {
         super.onAttach(activity);
 
         try {
-            activitySettingsFragment = ((LauncherActivity) activity);
-            activitySettingsFragment.onSectionAttached(
-                    0);
+            activitySettingsFragment = ((MainActivity) activity);
+
         } catch (Exception e) {
             e.printStackTrace();
             getActivity().finish();
-            Intent newIntent = new Intent(getActivity(), LauncherActivity.class);
+            Intent newIntent = new Intent(getActivity(), MainActivity.class);
             startActivity(newIntent);
 
         }

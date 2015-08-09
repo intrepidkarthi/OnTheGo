@@ -1,23 +1,23 @@
 package com.looksphere.goindia.fragment;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.List;
-
 import com.looksphere.goindia.R;
-import com.looksphere.goindia.activity.LauncherActivity;
+import com.looksphere.goindia.activity.MainActivity;
+
+import java.util.List;
 
 public class EmailFragment extends Fragment {
 
-    LauncherActivity activityEmailFragment;
+    MainActivity activityEmailFragment;
 
     public EmailFragment() {
     }
@@ -86,13 +86,12 @@ public class EmailFragment extends Fragment {
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            activityEmailFragment = ((LauncherActivity) activity);
-            activityEmailFragment.onSectionAttached(
-                    5);
+            activityEmailFragment = ((MainActivity) activity);
+
         } catch (Exception e) {
             e.printStackTrace();
             getActivity().finish();
-            Intent newIntent = new Intent(getActivity(), LauncherActivity.class);
+            Intent newIntent = new Intent(getActivity(), MainActivity.class);
             startActivity(newIntent);
 
         }

@@ -56,7 +56,7 @@ public class SplashActivity extends AppCompatActivity {
     //Call to load home screen
     private void navigateToHome() {
 
-        if (sharedPreferencesController.getString("APIKey").equals("")) {
+        if (sharedPreferencesController.getString("APIKey").length() > 0) {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -72,7 +72,7 @@ public class SplashActivity extends AppCompatActivity {
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), TutorialActivity.class);
                     startActivity(intent);
                     overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                     finish();
