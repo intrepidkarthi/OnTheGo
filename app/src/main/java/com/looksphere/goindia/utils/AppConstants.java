@@ -4,7 +4,7 @@ package com.looksphere.goindia.utils;
  * Created by karthi on 30/03/14.
  */
 public class AppConstants {
-    public static final String SERVER_BASE_URL = "http://www.swachh.org";
+    public static final String SERVER_BASE_URL = "http://yourwebsitehere";
     public static final String GRAPH_API_URL = "https://graph.facebook.com/";
     public static final String FETCH_NEAREST_DIRT="/fetchnearestdirt?location=";
     public static final String GRAPH_API_IMAGE_SUFFIX = "/picture?type=small&width=200&height=200";
