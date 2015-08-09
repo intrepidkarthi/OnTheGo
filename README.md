@@ -10,9 +10,9 @@ $ ./gradlew assembleDebug
 ```
 
 ### Developers
-Karthikeyan NG [Link](http://www.intrepidkarthi.com)
-VinayVenu [Link](https://github.com/vinayvenu) 
-Prasanna venkatraman [Link](http://worldofprasanna.in/)
+# Karthikeyan NG [Link](http://www.intrepidkarthi.com) <br>
+# VinayVenu [Link](https://github.com/vinayvenu) <br>
+# Prasanna venkatraman [Link](http://worldofprasanna.in/)
 
 ### A few screenshots
 
