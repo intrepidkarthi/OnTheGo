@@ -2,14 +2,19 @@
 App developed at MobileSparks event from YourStory.com at Bengaluru on August, 2015
 
 
-To build the app
+### To build the app
 
 ```sh
 $ chmod +x gradlew
 $ ./gradlew assembleDebug
 ```
 
-A few screenshots
+### Developers
+Karthikeyan NG [Link](http://www.intrepidkarthi.com)
+VinayVenu [Link](https://github.com/vinayvenu) 
+Prasanna venkatraman [Link](http://worldofprasanna.in/)
+
+### A few screenshots
 
 ![screenshots](https://raw.githubusercontent.com/intrepidkarthi/OnTheGo/master/screenshots/one.png)
 ![screenshots](https://raw.githubusercontent.com/intrepidkarthi/OnTheGo/master/screenshots/Screenshot_2015-08-09-10-51-44.png)
