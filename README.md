@@ -7,6 +7,15 @@ Just snap a picture when you see an incident and post it here. That will be comm
 
 ### To build the app
 
+Before compiling the code, update all the necesary credentials.
+
+Facebook APP id<br>
+Google Maps API Key<br>
+Parse account cedentials<br>
+Cloudinary account credentials<br>
+Firbase account credentials<br>
+AWS server details. Server API details are not included under this.<br>
+
 ```sh
 $ chmod +x gradlew
 $ ./gradlew assembleDebug
